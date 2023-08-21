@@ -2,6 +2,17 @@ import profileImage from "../assets/profile.jpg";
 import SearchForm from "../components/SearchForm";
 
 const Homepage = () => {
+  let date = new Date();
+  let hours = date.getHours();
+  let greeting =
+    hours >= 5 && hours <= 11
+      ? "morning"
+      : hours >= 12 && hours <= 17
+      ? "afternoon"
+      : hours >= 18 && hours <= 20
+      ? "evening"
+      : "night";
+
   return (
     <main className="flex justify-center items-center bg-light_blue h-screen dark:bg-slate-950">
       <div className="flex gap-8 flex-col">
@@ -21,11 +32,11 @@ const Homepage = () => {
 
         <div className="flex gap-1 flex-col items-center">
           <h2 className="greetings">
-            <span>Good</span> <span className="text-deep_pink">afternoon</span>,{" "}
-            <span>Shaheer</span>
+            <span>Good</span> <span className="text-deep_pink">{greeting}</span>
+            , <span>Shaheer</span>
           </h2>
           <small className="text-base font-b612_mono text-slate_grey">
-            Date: 21-08-2023
+            Date: {date.getDate()}-{date.getMonth() + 1}-{date.getFullYear()}
           </small>
         </div>
 

@@ -7,7 +7,7 @@
 
 @layer components {
   .greetings {
-    @apply text-[28px] max-sm:text-[16px] font-b612_mono text-royal_blue tracking-wide text-center leading-6;
+    @apply text-[28px] max-sm:text-[16px] font-b612_mono text-royal_blue tracking-wide text-center leading-7;
   }
 
   .link {
