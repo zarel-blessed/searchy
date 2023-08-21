@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=B612+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .greetings {
+    @apply text-[28px] max-sm:text-[16px] font-b612_mono text-royal_blue tracking-wide text-center leading-6;
+  }
+
+  .link {
+    @apply text-sm text-royal_blue;
+  }
+
+  .switcher {
+    @apply flex gap-4 bg-light_blue dark:bg-slate-950 items-center border border-slate-400 py-2 px-4 rounded-3xl fixed top-8 right-8 max-sm:right-4;
+  }
+}
